@@ -11,6 +11,7 @@ html, body{
 }
 
 .site-footer {
+    margin-top: 200px;
     background: #182740;
     color: #fff;
 }
@@ -45,19 +46,21 @@ div.input {
     position: relative;
 }
 .my-ads {
-    min-height: 190px;
+    position: relative;
+    top: -10rem;
+    /*bottom: -10rem;*/
+    width: 23rem;
+    min-height: 220px;
     background: #0D3F96;
 }
 .zilla {
+    position: relative;
+    top: -100px;
     height: 190px;
     background: url(../images/coinzilla-join-us.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
-}
-
-.footer-ablock {
-
 }
 
 .main-art h2 {
@@ -114,7 +117,6 @@ header {
 }
 .right,.right button{
     text-transform: uppercase;
-    
 }
 .main-nav {
     margin: 0;
@@ -129,9 +131,11 @@ header {
     line-height: 0;
     background-color: #182740;
     margin-left: 3%;
-    
 }
-.main-nav li:hover, .header-right button:hover, .header-right span:hover, .hello-zilla span{
+.main-nav li:hover, 
+.header-right button:hover, 
+.header-right span:hover, 
+.hello-zilla span {
    color: #F7931A;
 }
 .main-nav ul{
@@ -147,18 +151,84 @@ header {
     text-transform: uppercase;
     font-size: 24px;
 }
-
+#signIn{
+    cursor: pointer;
+}
 .hello-zilla .s-text{
     font-size: 11px;
+
 }
+.hello-zilla .s-text a{
+   color: #FFF; 
+}
+
 .bl-color{
     background: #0D3F96;
 }
-.my-utp:hover{
+.my-utp:hover, .byAdds:hover{
     color: white;
+    transition-duration: 1s;
 }
-.m10{
+.mt10{
     margin-top: 10px;
+}
+.mt50{
+    margin-top: 50px;
+}
+i {
+    margin-right: 10px;
+}
+
+.triangle-r::after, .triangle-l::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9rem;
+    border: 20px solid transparent;
+}
+.triangle-r::after{
+   right: -2.6rem;
+   border-left: 20px solid #0D3F96;
+}
+.triangle-l::before{
+   right: 23rem;
+   border-right: 20px solid #0D3F96;
+}
+.my-ads h3{
+    padding: 20px 20px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+
+}
+.byAdds{
+    background-color: #F7931A;
+    padding: 2.5% 26%;
+    margin-left: 10%;
+    border: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 24px;
+
+}
+
+.footer-items{
+    padding-bottom: 5rem;
+}
+
+/*Media***************************************/
+@media screen and (max-width: 995px) {
+    .triangle-l::before, .triangle-r::after{
+        visibility: hidden;
+    }
+    .my-ads{
+        margin: 0 auto;
+        top: 0;
+
+    }
+    .site-footer {
+    margin-top: 0;
+}
 }
 @media screen and (max-width: 600px) {
     .hello-zilla {
